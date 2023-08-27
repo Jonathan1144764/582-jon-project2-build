@@ -9,8 +9,15 @@
 </template>
 
 <script>
+import { useUserStore } from "../store/userStore";
+
 export default {
   name: "UserList",
+  setup() {
+    const userStore = useUserStore();
+
+    return { userStore };
+  },
   props: {
     allUsers: {
       type: Array,
@@ -28,6 +35,7 @@ export default {
   methods: {
     loggedUser() {
       console.log(event.target.value);
+      this.userStore.loggedUser = event.target.value;
     },
   },
 };
