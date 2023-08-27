@@ -3,6 +3,7 @@
     <div class="container">
       <div class="header-flex">
         <h1>Parks & Rec</h1>
+        <UserList />
         <HeaderNav />
       </div>
     </div>
@@ -11,11 +12,13 @@
 
 <script>
 import HeaderNav from "./HeaderNav.vue";
+import UserList from "./UserList.vue";
 
 export default {
   name: "MainHeader",
   components: {
     HeaderNav,
+    UserList,
   },
 };
 </script>
