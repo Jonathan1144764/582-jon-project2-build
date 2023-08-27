@@ -20,14 +20,31 @@ export default {
     },
   },
   methods: {
-    createNewUser() {
-      console.log(this.allUsers[this.allUsers.length - 1]);
-      let newId = Number(this.allUsers[this.allUsers.length - 1].id) + 1;
+    async createNewUser() {
+      let newId = this.allUsers[this.allUsers.length - 1].id + 1;
       let number =
         Number(this.allUsers[this.allUsers.length - 1].username.substring(5)) +
         1;
       let newUsername = "Guest" + number.toString();
-      console.log(newId, newUsername);
+      const newUser = {
+        id: newId,
+        username: newUsername,
+        bookmarkedEvents: [],
+      };
+      try {
+        await fetch(
+          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
