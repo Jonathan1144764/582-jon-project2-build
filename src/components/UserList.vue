@@ -36,6 +36,7 @@ export default {
     loggedUser() {
       console.log(event.target.value);
       this.userStore.loggedUser = event.target.value;
+      this.userStore.authenticate(event.target.value);
     },
   },
 };
