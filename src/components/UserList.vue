@@ -1,6 +1,8 @@
 <template>
-  <select name="users" id="users-list">
-    <option v-for="user in allUsers" :value="user.username" :key="user.id">
+  <label for="users">Login: </label>
+  <select name="users" id="users-list" @change="loggedUser">
+    <option value=""></option>
+    <option v-for="user in this.allUsers" :value="user.username" :key="user.id">
       {{ user.username }}
     </option>
   </select>
@@ -9,20 +11,24 @@
 <script>
 export default {
   name: "UserList",
-  data() {
-    return {
-      allUsers: [],
-    };
+  props: {
+    allUsers: {
+      type: Array,
+      default() {
+        return [
+          {
+            id: 0,
+            username: "default",
+            bookmarkedEvents: ["event1", "event2"],
+          },
+        ];
+      },
+    },
   },
-  created() {
-    fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        for (let user of json) {
-          this.allUsers.push(user);
-        }
-      });
+  methods: {
+    loggedUser() {
+      console.log(event.target.value);
+    },
   },
 };
 </script>

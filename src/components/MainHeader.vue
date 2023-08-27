@@ -3,7 +3,7 @@
     <div class="container">
       <div class="header-flex">
         <h1>Parks & Rec</h1>
-        <UserList />
+        <ManageUsers />
         <HeaderNav />
       </div>
     </div>
@@ -12,13 +12,13 @@
 
 <script>
 import HeaderNav from "./HeaderNav.vue";
-import UserList from "./UserList.vue";
+import ManageUsers from "./ManageUsers.vue";
 
 export default {
   name: "MainHeader",
   components: {
     HeaderNav,
-    UserList,
+    ManageUsers,
   },
 };
 </script>
