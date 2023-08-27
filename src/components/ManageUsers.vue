@@ -1,6 +1,6 @@
 <template>
   <div class="user-management">
-    <CreateUsers :allUsers="allUsers" />
+    <CreateUsers @refetchUsers="fetchUsers" :allUsers="allUsers" />
     <UserList :allUsers="allUsers" />
   </div>
 </template>
