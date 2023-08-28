@@ -26,7 +26,7 @@ export default {
         Number(this.allUsers[this.allUsers.length - 1].username.substring(5)) +
         1;
       let newUsername = "Guest" + number.toString();
-      const newUser = {
+      let newUser = {
         id: newId,
         username: newUsername,
         bookmarkedEvents: [],
