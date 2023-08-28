@@ -8,12 +8,14 @@
       <ParkFacilitiesInput />
     </div>
   </form>
+  <SubmitParkButton />
 </template>
 
 <script>
 import ParkNameInput from "./ParkNameInput.vue";
 import ParkStatusInput from "./ParkStatusInput.vue";
 import ParkFacilitiesInput from "./ParkFacilitiesInput.vue";
+import SubmitParkButton from "./SubmitParkButton.vue";
 
 export default {
   name: "ParkFrom",
@@ -21,6 +23,7 @@ export default {
     ParkNameInput,
     ParkStatusInput,
     ParkFacilitiesInput,
+    SubmitParkButton,
   },
 };
 </script>
