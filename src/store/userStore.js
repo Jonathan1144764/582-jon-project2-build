@@ -14,10 +14,4 @@ export const useUserStore = defineStore("userStore", {
       }
     },
   },
-  //   getters: {
-  //     authenticated: (state) =>
-  //       state.loggedUser == "admin"
-  //         ? (state.isAuthenticated = true)
-  //         : (state.isAuthenticated = false),
-  //   },
 });

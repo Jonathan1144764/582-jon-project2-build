@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AdminView from "../views/AdminView.vue";
 import AdminWelcomeView from "../views/AdminWelcomeView.vue";
+import NewParkFormView from "../views/NewParkFormView.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
         path: "/admin",
         name: "welcome",
         component: AdminWelcomeView,
+      },
+      {
+        path: "/admin/newpark",
+        name: "newpark",
+        component: NewParkFormView,
       },
     ],
   },
