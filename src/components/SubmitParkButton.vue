@@ -57,6 +57,15 @@ export default {
         console.log(error);
       }
       this.$emit("refetchParks", newId);
+      this.clear();
+    },
+    clear() {
+      document.querySelector("#park-name-input").value = "";
+      document.querySelector('input[name="status"]:checked').checked = false;
+      document.querySelector("#soccer").value = 0;
+      document.querySelector("#baseball").value = 0;
+      document.querySelector("#bathrooms").value = 0;
+      document.querySelector("#playground").value = 0;
     },
   },
 };
