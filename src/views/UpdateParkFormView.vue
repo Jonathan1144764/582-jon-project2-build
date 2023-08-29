@@ -1,9 +1,11 @@
 <template>
   <ParkSelect :allParks="allParks" />
+  <ParkForm />
 </template>
 
 <script>
 import ParkSelect from "../components/ParkSelect.vue";
+import ParkForm from "../components/ParkForm.vue";
 
 export default {
   name: "UpdateParkFormView",
@@ -14,6 +16,7 @@ export default {
   },
   components: {
     ParkSelect,
+    ParkForm,
   },
   methods: {
     fetchParks() {
