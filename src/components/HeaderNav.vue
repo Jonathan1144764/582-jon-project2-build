@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link :class="{ disabled: !userStore.isAuthenticated }" to="/admin"
+    <router-link v-if="userStore.isAuthenticated" to="/admin"
       >Admin</router-link
     >
   </nav>
@@ -20,8 +20,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.disabled {
-  display: none;
-}
-</style>
+<style scoped lang="scss"></style>
