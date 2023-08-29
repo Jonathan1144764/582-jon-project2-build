@@ -1,6 +1,6 @@
 <template>
   <label for="parks">Select Park: </label>
-  <select name="parks" id="parks">
+  <select name="parks" id="parks" @change="selectPark">
     <option value=""></option>
     <option v-for="park in this.allParks" :value="park.parkName" :key="park.id">
       {{ park.parkName }}
@@ -11,6 +11,7 @@
 <script>
 export default {
   name: "ParkSelect",
+  emits: ["populateForm"],
   props: {
     allParks: {
       type: Array,
@@ -27,6 +28,16 @@ export default {
           },
         ];
       },
+    },
+  },
+  methods: {
+    selectPark() {
+      for (let i = 0; i < this.allParks.length; i++) {
+        if (this.allParks[i].parkName == event.target.value) {
+          let selectedPark = this.allParks[i];
+          this.$emit("populateForm", selectedPark);
+        }
+      }
     },
   },
 };

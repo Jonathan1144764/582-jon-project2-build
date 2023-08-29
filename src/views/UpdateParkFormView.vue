@@ -1,5 +1,5 @@
 <template>
-  <ParkSelect :allParks="allParks" />
+  <ParkSelect :allParks="allParks" @populateForm="populateForm" />
   <ParkForm />
 </template>
 
@@ -28,6 +28,24 @@ export default {
             this.allParks.push(park);
           }
         });
+    },
+    populateForm(selectedPark) {
+      for (let i = 0; i < this.allParks.length; i++) {
+        if (selectedPark.id == this.allParks[i].id) {
+          document.querySelector("#park-name-input").value =
+            selectedPark.parkName;
+          document.querySelector(
+            `input[value="${selectedPark.parkStatus}"]`
+          ).checked = true;
+          document.querySelector("#soccer").value = selectedPark.soccerFields;
+          document.querySelector("#baseball").value =
+            selectedPark.baseballDiamonds;
+          document.querySelector("#bathrooms").value =
+            selectedPark.parkBathrooms;
+          document.querySelector("#playground").value =
+            selectedPark.parkPlaygrounds;
+        }
+      }
     },
   },
   created() {
