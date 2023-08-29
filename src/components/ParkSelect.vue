@@ -35,6 +35,7 @@ export default {
       for (let i = 0; i < this.allParks.length; i++) {
         if (this.allParks[i].parkName == event.target.value) {
           let selectedPark = this.allParks[i];
+          console.log(selectedPark);
           this.$emit("populateForm", selectedPark);
         }
       }

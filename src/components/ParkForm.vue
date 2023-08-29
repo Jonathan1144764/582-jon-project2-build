@@ -8,7 +8,11 @@
       <ParkFacilitiesInput />
     </div>
   </form>
-  <SubmitParkButton @refetchParks="refetchParks" :allParks="allParks" />
+  <SubmitParkButton
+    @refetchParks="refetchParks"
+    :allParks="allParks"
+    :selectedPark="selectedPark"
+  />
 </template>
 
 <script>
@@ -35,6 +39,20 @@ export default {
             parkPlaygrounds: 0,
           },
         ];
+      },
+    },
+    selectedPark: {
+      type: Object,
+      default() {
+        return {
+          id: 0,
+          parkName: "default",
+          parkStatus: "no status",
+          soccerFields: 0,
+          baseballDiamonds: 0,
+          parkBathrooms: 0,
+          parkPlaygrounds: 0,
+        };
       },
     },
   },
