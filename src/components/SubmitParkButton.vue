@@ -1,10 +1,18 @@
 <template>
-  <button @click="submitNewPark">Submit</button>
+  <button
+    v-if="this.$route.href.substring(6) == '/newpark'"
+    @click="submitNewPark"
+  >
+    Submit
+  </button>
+  <button v-if="this.$route.href.substring(6) == '/updatepark'">Update</button>
+  <button v-if="this.$route.href.substring(6) == '/updatepark'">Delete</button>
 </template>
 
 <script>
 export default {
   name: "SubmitParkButton",
+  emits: ["refetchParks"],
   props: {
     allParks: {
       type: Array,
