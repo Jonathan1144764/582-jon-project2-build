@@ -24,7 +24,8 @@ export default {
     },
   },
   methods: {
-    submitNewPark() {
+    async submitNewPark() {
+      let newId = this.allParks[this.allParks.length - 1].id + 1;
       let name = document.querySelector("#park-name-input").value;
       let status = document.querySelector('input[name="status"]:checked').value;
       let soccer = Number(document.querySelector("#soccer").value);
@@ -33,6 +34,7 @@ export default {
       let playgrounds = Number(document.querySelector("#playground").value);
 
       let newPark = {
+        id: newId,
         parkName: name,
         parkStatus: status,
         soccerFields: soccer,
@@ -40,7 +42,21 @@ export default {
         parkBathrooms: bathrooms,
         parkPlaygrounds: playgrounds,
       };
-      console.log(newPark, this.allParks);
+      try {
+        await fetch(
+          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newPark),
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
+      this.$emit("refetchParks", newId);
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <ParkForm :allParks="allParks" />
+  <ParkForm @refetchParks="fetchParks" :allParks="allParks" />
 </template>
 
 <script>
@@ -21,7 +21,9 @@ export default {
       fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin")
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
+          for (let park of json) {
+            this.allParks.push(park);
+          }
         });
     },
   },

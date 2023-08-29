@@ -8,7 +8,7 @@
       <ParkFacilitiesInput />
     </div>
   </form>
-  <SubmitParkButton :allParks="allParks" />
+  <SubmitParkButton @refetchParks="refetchParks" :allParks="allParks" />
 </template>
 
 <script>
@@ -19,29 +19,35 @@ import SubmitParkButton from "./SubmitParkButton.vue";
 
 export default {
   name: "ParkFrom",
-  // props: {
-  //   allParks: {
-  //     type: Array,
-  //     default() {
-  //       return [
-  //         {
-  //           id: 0,
-  //           parkName: "default",
-  //           parkStatus: "no status",
-  //           soccerFields: 0,
-  //           baseballDiamonds: 0,
-  //           parkBathrooms: 0,
-  //           parkPlaygrounds: 0,
-  //         }
-  //       ]
-  //     }
-  //   }
-  // },
+  emits: ["refetchParks"],
+  props: {
+    allParks: {
+      type: Array,
+      default() {
+        return [
+          {
+            id: 0,
+            parkName: "default",
+            parkStatus: "no status",
+            soccerFields: 0,
+            baseballDiamonds: 0,
+            parkBathrooms: 0,
+            parkPlaygrounds: 0,
+          },
+        ];
+      },
+    },
+  },
   components: {
     ParkNameInput,
     ParkStatusInput,
     ParkFacilitiesInput,
     SubmitParkButton,
+  },
+  methods: {
+    refetchParks(id) {
+      this.$emit("refetchParks", id);
+    },
   },
 };
 </script>
