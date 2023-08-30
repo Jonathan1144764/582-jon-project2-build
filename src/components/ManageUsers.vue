@@ -1,16 +1,22 @@
 <template>
   <div class="user-management">
     <CreateUsers @refetchUsers="fetchUsers" :allUsers="allUsers" />
-    <UserList :allUsers="allUsers" />
+    <UserList @loggedUser="loggedUser" :allUsers="allUsers" />
   </div>
 </template>
 
 <script>
+import { useUserStore } from "../store/userStore";
 import UserList from "./UserList.vue";
 import CreateUsers from "./CreateUsers.vue";
 
 export default {
   name: "ManageUsers",
+  setup() {
+    const userStore = useUserStore();
+
+    return { userStore };
+  },
   data() {
     return {
       allUsers: [],
@@ -30,6 +36,10 @@ export default {
             this.allUsers.push(user);
           }
         });
+    },
+    loggedUser(user) {
+      this.userStore.loggedUser = user;
+      this.userStore.authenticate(user);
     },
   },
   created() {
