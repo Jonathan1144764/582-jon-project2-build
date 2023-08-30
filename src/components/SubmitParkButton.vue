@@ -128,7 +128,9 @@ export default {
       } catch (error) {
         console.log(error);
       }
+      this.$emit("refetchParks", updatedPark.id);
       this.clear();
+      this.clearParkSelect();
     },
     async deletePark() {
       let parkId = this.selectedPark.id;
@@ -146,10 +148,11 @@ export default {
       } catch (error) {
         console.log(error);
       }
+      this.$emit("refetchParks", parkId);
       this.clear();
+      this.clearParkSelect();
     },
     clear() {
-      document.querySelector("#parks").value = "";
       document.querySelector("#park-name-input").value = "";
       document.querySelector("#park-image-input").value = "";
       document.querySelector('input[name="status"]:checked').checked = false;
@@ -157,6 +160,9 @@ export default {
       document.querySelector("#baseball").value = 0;
       document.querySelector("#bathrooms").value = 0;
       document.querySelector("#playground").value = 0;
+    },
+    clearParkSelect() {
+      document.querySelector("#parks").value = "";
     },
   },
 };

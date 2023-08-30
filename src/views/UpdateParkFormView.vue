@@ -1,6 +1,6 @@
 <template>
   <ParkSelect :allParks="allParks" @populateForm="populateForm" />
-  <ParkForm :selectedPark="selectedPark" />
+  <ParkForm :selectedPark="selectedPark" @refetchParks="fetchParks" />
 </template>
 
 <script>

@@ -11,6 +11,7 @@
 <script>
 export default {
   name: "UserList",
+  emits: ["loggedUser"],
   props: {
     allUsers: {
       type: Array,
