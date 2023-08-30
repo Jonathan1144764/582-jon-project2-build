@@ -47,11 +47,8 @@ export default {
             selectedPark.parkBathrooms;
           document.querySelector("#playground").value =
             selectedPark.parkPlaygrounds;
-          console.log(selectedPark.id);
-          console.log(this.allParks[i].id);
         }
       }
-      console.log(selectedPark);
       this.selectedPark = selectedPark;
     },
   },

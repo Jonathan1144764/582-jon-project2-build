@@ -11,7 +11,12 @@
   >
     Update
   </button>
-  <button v-if="this.$route.href.substring(6) == '/updatepark'">Delete</button>
+  <button
+    v-if="this.$route.href.substring(6) == '/updatepark'"
+    @click="deletePark"
+  >
+    Delete
+  </button>
 </template>
 
 <script>
@@ -109,8 +114,6 @@ export default {
         parkBathrooms: bathrooms,
         parkPlaygrounds: playgrounds,
       };
-      console.log(updatedPark);
-      console.log(this.selectedPark);
       try {
         await fetch(
           "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updatepark",
@@ -127,7 +130,26 @@ export default {
       }
       this.clear();
     },
+    async deletePark() {
+      let parkId = this.selectedPark.id;
+      try {
+        await fetch(
+          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updatepark",
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id: parkId }),
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
+      this.clear();
+    },
     clear() {
+      document.querySelector("#parks").value = "";
       document.querySelector("#park-name-input").value = "";
       document.querySelector("#park-image-input").value = "";
       document.querySelector('input[name="status"]:checked').checked = false;
