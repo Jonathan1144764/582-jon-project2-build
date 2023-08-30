@@ -32,6 +32,7 @@ export default {
           {
             id: 0,
             parkName: "default",
+            parkImage: "http://www.example.com",
             parkStatus: "no status",
             soccerFields: 0,
             baseballDiamonds: 0,
@@ -47,6 +48,7 @@ export default {
         return {
           id: 0,
           parkName: "default",
+          parkImage: "http://www.example.com",
           parkStatus: "no status",
           soccerFields: 0,
           baseballDiamonds: 0,
