@@ -35,6 +35,8 @@ export default {
         if (selectedPark.id == this.allParks[i].id) {
           document.querySelector("#park-name-input").value =
             selectedPark.parkName;
+          document.querySelector("#park-image-input").value =
+            selectedPark.parkImage;
           document.querySelector(
             `input[value="${selectedPark.parkStatus}"]`
           ).checked = true;

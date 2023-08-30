@@ -1,6 +1,7 @@
 <template>
   <form>
     <ParkNameInput />
+    <ParkImageInput />
     <div class="park-radio-inputs">
       <ParkStatusInput />
     </div>
@@ -17,6 +18,7 @@
 
 <script>
 import ParkNameInput from "./ParkNameInput.vue";
+import ParkImageInput from "./ParkImageInput.vue";
 import ParkStatusInput from "./ParkStatusInput.vue";
 import ParkFacilitiesInput from "./ParkFacilitiesInput.vue";
 import SubmitParkButton from "./SubmitParkButton.vue";
@@ -60,6 +62,7 @@ export default {
   },
   components: {
     ParkNameInput,
+    ParkImageInput,
     ParkStatusInput,
     ParkFacilitiesInput,
     SubmitParkButton,

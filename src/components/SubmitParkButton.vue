@@ -56,6 +56,7 @@ export default {
     async submitNewPark() {
       let newId = this.allParks[this.allParks.length - 1].id + 1;
       let name = document.querySelector("#park-name-input").value;
+      let image = document.querySelector("#park-image-input").value;
       let status = document.querySelector('input[name="status"]:checked').value;
       let soccer = Number(document.querySelector("#soccer").value);
       let baseball = Number(document.querySelector("#baseball").value);
@@ -65,6 +66,7 @@ export default {
       let newPark = {
         id: newId,
         parkName: name,
+        parkImage: image,
         parkStatus: status,
         soccerFields: soccer,
         baseballDiamonds: baseball,
@@ -90,6 +92,7 @@ export default {
     },
     async updatePark() {
       let name = document.querySelector("#park-name-input").value;
+      let image = document.querySelector("#park-image-input").value;
       let status = document.querySelector('input[name="status"]:checked').value;
       let soccer = Number(document.querySelector("#soccer").value);
       let baseball = Number(document.querySelector("#baseball").value);
@@ -99,6 +102,7 @@ export default {
       let updatedPark = {
         id: this.selectedPark.id,
         parkName: name,
+        parkImage: image,
         parkStatus: status,
         soccerFields: soccer,
         baseballDiamonds: baseball,
@@ -125,6 +129,7 @@ export default {
     },
     clear() {
       document.querySelector("#park-name-input").value = "";
+      document.querySelector("#park-image-input").value = "";
       document.querySelector('input[name="status"]:checked').checked = false;
       document.querySelector("#soccer").value = 0;
       document.querySelector("#baseball").value = 0;
