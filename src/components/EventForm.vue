@@ -1,6 +1,7 @@
 <template>
   <form>
     <EventNameInput />
+    <ParkSelect />
     <EventDatesInputs />
     <EventDescriptionInput />
   </form>
@@ -10,6 +11,7 @@
 import EventNameInput from "./EventNameInput.vue";
 import EventDatesInputs from "./EventDatesInputs.vue";
 import EventDescriptionInput from "./EventDescriptionInput.vue";
+import ParkSelect from "./ParkSelect.vue";
 
 export default {
   name: "EventForm",
@@ -17,6 +19,7 @@ export default {
     EventNameInput,
     EventDatesInputs,
     EventDescriptionInput,
+    ParkSelect,
   },
 };
 </script>
