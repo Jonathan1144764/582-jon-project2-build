@@ -5,6 +5,7 @@ import AdminWelcomeView from "../views/AdminWelcomeView.vue";
 import NewParkFormView from "../views/NewParkFormView.vue";
 import UpdateParkFormView from "../views/UpdateParkFormView.vue";
 import NewEventFormView from "../views/NewEventFormView.vue";
+import UpdateEventFormView from "../views/UpdateEventFormView.vue";
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
         path: "/admin/newevent",
         name: "newevent",
         component: NewEventFormView,
+      },
+      {
+        path: "/admin/updateevent",
+        name: "updateevent",
+        component: UpdateEventFormView,
       },
     ],
   },
