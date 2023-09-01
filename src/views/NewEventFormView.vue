@@ -1,5 +1,9 @@
 <template>
-  <EventForm :allParks="allParks" />
+  <EventForm
+    :allEvents="allEvents"
+    :allParks="allParks"
+    @refetchEvents="fetchEvents"
+  />
 </template>
 
 <script>
@@ -10,6 +14,7 @@ export default {
   data() {
     return {
       allParks: [],
+      allEvents: [],
     };
   },
   components: {
@@ -26,9 +31,22 @@ export default {
           }
         });
     },
+    fetchEvents() {
+      this.allEvents = [];
+      fetch(
+        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/newevent"
+      )
+        .then((response) => response.json())
+        .then((json) => {
+          for (let event of json) {
+            this.allEvents.push(event);
+          }
+        });
+    },
   },
   created() {
     this.fetchParks();
+    this.fetchEvents();
   },
 };
 </script>

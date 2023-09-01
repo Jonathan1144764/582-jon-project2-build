@@ -9,7 +9,11 @@
       <ParkFacilitiesInput />
     </div>
   </form>
-  <SubmitParkButton @refetchParks="refetchParks" :selectedPark="selectedPark" />
+  <SubmitParkButton
+    @refetchParks="refetchParks"
+    :allParks="allParks"
+    :selectedPark="selectedPark"
+  />
 </template>
 
 <script>
