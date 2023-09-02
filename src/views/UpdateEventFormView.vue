@@ -1,9 +1,11 @@
 <template>
-  <EventSelect :allEvents="allEvents" />
+  <EventSelect :allEvents="allEvents" @populateForm="populateForm" />
+  <EventForm :selectedEvent="selectedEvent" :allParks="allParks" />
 </template>
 
 <script>
 import EventSelect from "../components/EventSelect.vue";
+import EventForm from "../components/EventForm.vue";
 
 export default {
   name: "UpdateEventFormView",
@@ -11,10 +13,12 @@ export default {
     return {
       allEvents: [],
       selectedEvent: {},
+      allParks: [],
     };
   },
   components: {
     EventSelect,
+    EventForm,
   },
   methods: {
     fetchEvents() {
@@ -29,9 +33,38 @@ export default {
           }
         });
     },
+    fetchParks() {
+      this.allParks = [];
+      fetch(
+        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent/park"
+      )
+        .then((response) => response.json())
+        .then((json) => {
+          for (let park of json) {
+            this.allParks.push(park);
+          }
+        });
+    },
+    populateForm(selectedEvent) {
+      for (let i = 0; i < this.allEvents.length; i++) {
+        if (selectedEvent.id == this.allEvents[i].id) {
+          document.querySelector("#event-name-input").value =
+            selectedEvent.eventName;
+          document.querySelector("#parks").value = selectedEvent.eventLocation;
+          document.querySelector("#start-date-input").value =
+            selectedEvent.eventStartDate;
+          document.querySelector("#end-date-input").value =
+            selectedEvent.eventEndDate;
+          document.querySelector("#event-description-input").value =
+            selectedEvent.eventDescription;
+        }
+      }
+      this.selectedEvent = selectedEvent;
+    },
   },
   created() {
     this.fetchEvents();
+    this.fetchParks();
   },
 };
 </script>

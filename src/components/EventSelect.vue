@@ -1,6 +1,6 @@
 <template>
   <label for="events">Select Event: </label>
-  <select name="events" id="events">
+  <select name="events" id="events" @change="selectEvent">
     <option value=""></option>
     <option
       v-for="event in this.allEvents"

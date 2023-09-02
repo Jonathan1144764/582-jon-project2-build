@@ -51,6 +51,19 @@ export default {
         ];
       },
     },
+    selectedEvent: {
+      type: Object,
+      default() {
+        return {
+          id: 0,
+          eventName: "default",
+          eventLocation: "somewhere",
+          eventStartDate: "2013-08-20",
+          eventEndDate: "2013-09-2",
+          eventDescription: "a default description",
+        };
+      },
+    },
   },
   components: {
     EventNameInput,
