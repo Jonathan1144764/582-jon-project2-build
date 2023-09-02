@@ -109,7 +109,7 @@ export default {
             headers: {
               "Content-Type": "application/json",
             },
-            bode: JSON.stringify(updatedEvent),
+            body: JSON.stringify(updatedEvent),
           }
         );
       } catch (error) {
