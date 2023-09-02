@@ -5,7 +5,11 @@
     <EventDatesInputs />
     <EventDescriptionInput />
   </form>
-  <SubmitEventButton :allEvents="allEvents" @refetchEvents="refetchEvents" />
+  <SubmitEventButton
+    :selectedEvent="selectedEvent"
+    :allEvents="allEvents"
+    @refetchEvents="refetchEvents"
+  />
 </template>
 
 <script>
