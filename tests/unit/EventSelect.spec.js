@@ -1,10 +1,9 @@
-// import { shallowMount } from "@vue/test-utils";
-// import EventSelect from "@/components/EventSelect.vue";
+import { shallowMount } from "@vue/test-utils";
+import EventSelect from "@/components/EventSelect.vue";
 
-// describe("EventSelect", () => {
-//   it("emits an event to populate form on value change", async () => {
-//     const wrapper = shallowMount(EventSelect);
-//     await wrapper.vm.selectEvent();
-//     console.log(wrapper.emitted());
-//   });
-// });
+describe("EventSelect", () => {
+  it("displays the props", () => {
+    const wrapper = shallowMount(EventSelect);
+    expect(wrapper.findAll("option")[1].text()).toBe("default");
+  });
+});
