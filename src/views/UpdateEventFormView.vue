@@ -1,6 +1,10 @@
 <template>
   <EventSelect :allEvents="allEvents" @populateForm="populateForm" />
-  <EventForm :selectedEvent="selectedEvent" :allParks="allParks" />
+  <EventForm
+    :selectedEvent="selectedEvent"
+    :allParks="allParks"
+    @refetchEvents="fetchEvents"
+  />
 </template>
 
 <script>

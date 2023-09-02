@@ -102,7 +102,7 @@ export default {
         eventDescription: description,
       };
       try {
-        fetch(
+        await fetch(
           "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent",
           {
             method: "PUT",
