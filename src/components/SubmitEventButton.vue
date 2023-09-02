@@ -5,7 +5,12 @@
   >
     Submit
   </button>
-  <button v-if="this.$route.href.substring(6) == '/updateevent'">Update</button>
+  <button
+    v-if="this.$route.href.substring(6) == '/updateevent'"
+    @click="updateEvent"
+  >
+    Update
+  </button>
   <button v-if="this.$route.href.substring(6) == '/updateevent'">Delete</button>
 </template>
 
