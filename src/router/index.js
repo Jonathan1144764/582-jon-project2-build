@@ -6,6 +6,7 @@ import NewParkFormView from "../views/NewParkFormView.vue";
 import UpdateParkFormView from "../views/UpdateParkFormView.vue";
 import NewEventFormView from "../views/NewEventFormView.vue";
 import UpdateEventFormView from "../views/UpdateEventFormView.vue";
+import PublicView from "../views/PublicView.vue";
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
         component: UpdateEventFormView,
       },
     ],
+  },
+  {
+    path: "/public",
+    name: "public",
+    component: PublicView,
   },
   {
     path: "/about",
