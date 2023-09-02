@@ -11,7 +11,12 @@
   >
     Update
   </button>
-  <button v-if="this.$route.href.substring(6) == '/updateevent'">Delete</button>
+  <button
+    v-if="this.$route.href.substring(6) == '/updateevent'"
+    @click="deleteEvent"
+  >
+    Delete
+  </button>
 </template>
 
 <script>
@@ -116,6 +121,26 @@ export default {
         console.log(error);
       }
       this.$emit("refetchEvents", updatedEvent.id);
+      this.clear();
+      this.clearEventSelect();
+    },
+    async deleteEvent() {
+      let eventId = this.selectedEvent.id;
+      try {
+        await fetch(
+          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent",
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id: eventId }),
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
+      this.$emit("refetchEvents", eventId);
       this.clear();
       this.clearEventSelect();
     },
