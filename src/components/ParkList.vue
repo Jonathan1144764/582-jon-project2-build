@@ -1,8 +1,12 @@
 <template>
-  <div class="park-list-grid"></div>
+  <div class="park-list-grid">
+    <ParkItem v-for="park in allParks" :park="park" :key="park.id" />
+  </div>
 </template>
 
 <script>
+import ParkItem from "./ParkItem.vue";
+
 export default {
   name: "ParkList",
   props: {
@@ -23,6 +27,9 @@ export default {
         ];
       },
     },
+  },
+  components: {
+    ParkItem,
   },
 };
 </script>
