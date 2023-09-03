@@ -1,8 +1,11 @@
 <template>
     <h2>See what's up at your local parks</h2>
+    <ParkList :allParks="allParks" />
 </template>
 
 <script>
+import ParkList from "@/components/ParkList.vue";
+
 export default {
     name: "PublicView",
     data() {
@@ -10,6 +13,9 @@ export default {
             allEvents: [],
             allParks: [],
         };
+    },
+    components: {
+        ParkList,
     },
     methods: {
         fetchParks() {
