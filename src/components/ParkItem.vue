@@ -13,13 +13,22 @@
       <li>Playgrounds: {{ park.parkPlaygrounds }}</li>
     </ul>
     <button @click="showEvents">See events</button>
-    <div class="park-events"></div>
+    <div v-if="isShown" class="park-events">
+      <ExitWindow @closeWindow="closeWindow" />
+    </div>
   </div>
 </template>
 
 <script>
+import ExitWindow from "./ExitWindow.vue";
+
 export default {
   name: "ParkItem",
+  data() {
+    return {
+      isShown: false,
+    };
+  },
   props: {
     park: {
       type: Object,
@@ -52,8 +61,12 @@ export default {
       },
     },
   },
+  components: {
+    ExitWindow,
+  },
   methods: {
     async showEvents() {
+      this.isShown = true;
       await this.$router.push({
         name: "parkname",
         params: { parkname: this.park.parkName },
@@ -82,6 +95,9 @@ export default {
           container.appendChild(p3);
         }
       }
+    },
+    closeWindow() {
+      this.isShown = false;
     },
   },
 };
