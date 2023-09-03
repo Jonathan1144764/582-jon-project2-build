@@ -12,6 +12,7 @@
       <li>Chalets: {{ park.parkBathrooms }}</li>
       <li>Playgrounds: {{ park.parkPlaygrounds }}</li>
     </ul>
+    <button @click="showEvents">See events</button>
   </div>
 </template>
 
@@ -33,6 +34,35 @@ export default {
           parkPlaygrounds: 0,
         };
       },
+    },
+    allEvents: {
+      type: Array,
+      default() {
+        return [
+          {
+            id: 0,
+            eventName: "default",
+            eventLocation: "somewhere",
+            eventStartDate: 0,
+            eventEndDate: 0,
+            eventDescription: 0,
+          },
+        ];
+      },
+    },
+  },
+  methods: {
+    async showEvents() {
+      await this.$router.push({
+        name: "parkname",
+        params: { parkname: this.park.parkName },
+      });
+      console.log(this.$route.href.substring(7));
+      for (let i = 0; i < this.allEvents.length; i++) {
+        if (this.allEvents[i].eventLocation == this.$route.href.substring(8)) {
+          console.log(this.allEvents[i].eventName);
+        }
+      }
     },
   },
 };

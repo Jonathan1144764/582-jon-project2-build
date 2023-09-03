@@ -1,6 +1,6 @@
 <template>
   <h2>See what's up at your local parks</h2>
-  <ParkList :allParks="allParks" />
+  <ParkList :allParks="allParks" :allEvents="allEvents" />
 </template>
 
 <script>
