@@ -4,15 +4,15 @@
       class="park-image"
       :style="{ backgroundImage: 'url(' + park.parkImage + ')' }"
     ></div>
+    <h3>{{ park.parkName }}</h3>
+    <p>{{ park.parkStatus }}</p>
+    <ul>
+      <li>Soccer fields: {{ park.soccerFields }}</li>
+      <li>Baseball diamonds: {{ park.baseballDiamonds }}</li>
+      <li>Chalets: {{ park.parkBathrooms }}</li>
+      <li>Playgrounds: {{ park.parkPlaygrounds }}</li>
+    </ul>
   </div>
-  <h3>{{ park.parkName }}</h3>
-  <p>{{ park.parkStatus }}</p>
-  <ul>
-    <li>Soccer fields: {{ park.soccerFields }}</li>
-    <li>Baseball diamonds: {{ park.baseballDiamonds }}</li>
-    <li>Chalets: {{ park.parkBathrooms }}</li>
-    <li>Playgrounds: {{ park.parkPlaygrounds }}</li>
-  </ul>
 </template>
 
 <script>
