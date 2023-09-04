@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form class="park-form">
     <ParkNameInput />
     <ParkImageInput />
     <div class="park-radio-inputs">

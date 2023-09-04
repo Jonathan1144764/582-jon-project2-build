@@ -94,10 +94,54 @@ ul {
   margin-bottom: 0.5rem;
 }
 
+.admin-control-panel {
+  text-align: center;
+}
+
+.park-form {
+  text-align: left;
+}
+
+.park-radio-inputs {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .input-wrapper {
+    width: calc((100% - 20px) / 2);
+
+    input {
+      margin-right: 5px;
+    }
+  }
+}
+
+.park-number-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  label {
+    display: block;
+  }
+
+  .input-wrapper {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
 #users-list {
   padding: 3px 5px;
   background-color: #96c3f2;
   border: none;
+}
+
+#park-name-input,
+#park-image-input {
+  padding: 3px 5px;
+  outline: none;
+  display: block;
 }
 
 @media screen and (min-width: 576px) {
