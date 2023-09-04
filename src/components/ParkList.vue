@@ -51,16 +51,5 @@ export default {
   components: {
     ParkItem,
   },
-  // methods: {
-  //   showEvents(href) {
-  //     for (let i = 0; i < this.allEvents.length; i++) {
-  //       if (this.allEvents[i].eventLocation == href) {
-  //         console.log("yayy");
-  //       } else {
-  //         console.log("aww");
-  //       }
-  //     }
-  //   },
-  // },
 };
 </script>
