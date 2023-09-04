@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
 }
@@ -71,7 +75,6 @@ ul {
     border-radius: 10px;
     border: none;
     background-color: #d7be82;
-    cursor: pointer;
   }
   label {
     margin: 0 1rem;
@@ -186,16 +189,99 @@ ul {
   }
 }
 
-// .event-form input:first-of-type {
-//   display: block;
-//   margin: auto;
-//   margin-bottom: 0.5rem;
-// }
-
 .event-dates-inputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.public-view {
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .view-bookmarks-btn {
+    padding: 5px 10px;
+    margin-bottom: 1rem;
+    background-color: #4a7c59;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+  }
+}
+
+.park-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1.5rem;
+
+  .park {
+    position: relative;
+
+    .show-events-btn {
+      padding: 5px 10px;
+      background-color: #4a7c59;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+
+.park-image {
+  height: 200px;
+  width: 175px;
+  background-size: cover;
+  background-position: center;
+}
+
+.park-events {
+  position: absolute;
+  top: 0;
+  background-color: #4a7c59;
+  animation: fadein 0.08s linear;
+  animation-fill-mode: forwards;
+
+  p {
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  .exit-window {
+    margin: 5px 8px 0 0;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    float: right;
+  }
+}
+
+.park-event {
+  padding: 10px 15px;
+
+  button {
+    padding: 3px 5px;
+    background-color: #96c3f2;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+.park-event:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #users-list {
@@ -218,7 +304,6 @@ ul {
 }
 
 #start-date-input {
-  // display: inline;
   margin: auto;
 }
 

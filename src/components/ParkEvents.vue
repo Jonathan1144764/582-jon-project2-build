@@ -3,8 +3,8 @@
     <h3>{{ event.eventName }}</h3>
     <p class="event-location">{{ event.eventLocation }}</p>
     <p>
-      <span class="event-time">{{ event.eventStartDate }}</span>
-      <span class="event-time">{{ event.eventStartDate }}</span>
+      <span class="event-time">From: {{ event.eventStartDate }}</span>
+      <span class="event-time">To :{{ event.eventStartDate }}</span>
     </p>
     <p class="event-description">{{ event.eventDescription }}</p>
     <AddBookmark @bookmarkEvent="bookmarkEvent" />

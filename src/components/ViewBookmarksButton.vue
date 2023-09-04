@@ -1,5 +1,7 @@
 <template>
-  <button @click="bookmarksView">View your events</button>
+  <button class="view-bookmarks-btn" @click="bookmarksView">
+    View your events
+  </button>
 </template>
 
 <script>

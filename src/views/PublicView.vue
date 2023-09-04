@@ -1,12 +1,16 @@
 <template>
-  <h2>See what's up at your local parks</h2>
-  <ViewBookmarksButton @bookmarksView="bookmarksView" />
-  <BookmarksList
-    :userEvents="userEvents"
-    :isShown="isShown"
-    @closeWindow="closeWindow"
-  />
-  <ParkList :allParks="allParks" :allEvents="allEvents" />
+  <section class="public-view">
+    <div class="container">
+      <h2>See what's up at your local parks</h2>
+      <ViewBookmarksButton @bookmarksView="bookmarksView" />
+      <BookmarksList
+        :userEvents="userEvents"
+        :isShown="isShown"
+        @closeWindow="closeWindow"
+      />
+      <ParkList :allParks="allParks" :allEvents="allEvents" />
+    </div>
+  </section>
 </template>
 
 <script>

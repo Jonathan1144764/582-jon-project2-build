@@ -12,7 +12,7 @@
       <li>Chalets: {{ park.parkBathrooms }}</li>
       <li>Playgrounds: {{ park.parkPlaygrounds }}</li>
     </ul>
-    <button @click="showEvents">See events</button>
+    <button class="show-events-btn" @click="showEvents">See events</button>
     <div v-if="isShown" class="park-events">
       <ExitWindow @closeWindow="closeWindow" />
       <ParkEvents v-for="event in parkEvents" :event="event" :key="event.id" />
