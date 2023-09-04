@@ -30,6 +30,16 @@ body {
 
 header {
   background-color: #4a7c59;
+  nav {
+    margin-bottom: 0.5rem;
+    a {
+      color: #fff;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
 }
 
 section {
@@ -97,6 +107,11 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    nav {
+      margin: 0;
+    }
+  }
   .header-flex {
     height: 10vh;
     display: flex;

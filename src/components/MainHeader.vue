@@ -3,8 +3,8 @@
     <div class="container">
       <div class="header-flex">
         <h1>Parks & Rec</h1>
-        <ManageUsers />
         <HeaderNav />
+        <ManageUsers />
       </div>
     </div>
   </header>
