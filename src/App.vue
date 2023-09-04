@@ -24,7 +24,16 @@ export default {
 }
 
 body {
+  background-color: #d7be82;
   font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: #4a7c59;
+}
+
+section {
+  padding: 20px 0;
 }
 
 a {
@@ -41,16 +50,39 @@ ul {
   margin: auto;
 }
 
-nav {
-  padding: 30px;
+.header-flex {
+  padding: 1rem 0;
+  text-align: center;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.user-management {
+  button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d7be82;
+    cursor: pointer;
   }
+  label {
+    margin: 0 1rem;
+  }
+}
+
+.home-landing {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.home-landing p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+
+#users-list {
+  padding: 3px 5px;
+  background-color: #96c3f2;
+  border: none;
 }
 </style>
