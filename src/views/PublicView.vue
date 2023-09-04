@@ -1,17 +1,24 @@
 <template>
   <h2>See what's up at your local parks</h2>
   <ViewBookmarksButton @bookmarksView="bookmarksView" />
+  <BookmarksList
+    :userEvents="userEvents"
+    :isShown="isShown"
+    @closeWindow="closeWindow"
+  />
   <ParkList :allParks="allParks" :allEvents="allEvents" />
 </template>
 
 <script>
 import ParkList from "@/components/ParkList.vue";
 import ViewBookmarksButton from "@/components/ViewBookmarksButton.vue";
+import BookmarksList from "@/components/BookmarksList.vue";
 
 export default {
   name: "PublicView",
   data() {
     return {
+      isShown: false,
       allEvents: [],
       allParks: [],
       userEvents: [],
@@ -20,6 +27,7 @@ export default {
   components: {
     ParkList,
     ViewBookmarksButton,
+    BookmarksList,
   },
   methods: {
     fetchParks() {
@@ -48,6 +56,7 @@ export default {
         });
     },
     bookmarksView(loggedUser) {
+      this.isShown = true;
       this.userEvents = [];
       fetch(
         "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public/user"
@@ -55,13 +64,14 @@ export default {
         .then((response) => response.json())
         .then((json) => {
           for (let user of json) {
-            // this.userEvents.push(user);
             if (user.username == loggedUser) {
-              this.userEvents.push(user.bookmarkedEvents);
+              this.userEvents = user.bookmarkedEvents;
             }
           }
         });
-      console.log(this.userEvents);
+    },
+    closeWindow() {
+      this.isShown = false;
     },
   },
   created() {
