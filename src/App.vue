@@ -74,6 +74,10 @@ ul {
   h2 {
     margin-bottom: 1rem;
   }
+
+  .container {
+    max-width: 700px;
+  }
 }
 
 .home-landing p:first-of-type {
@@ -84,5 +88,20 @@ ul {
   padding: 3px 5px;
   background-color: #96c3f2;
   border: none;
+}
+
+@media screen and (min-width: 576px) {
+  section {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-flex {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 </style>
