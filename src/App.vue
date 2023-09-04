@@ -96,10 +96,48 @@ ul {
 
 .admin-control-panel {
   text-align: center;
+
+  button {
+    padding: 10px 25px;
+    margin: 0 0.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #4a7c59;
+    color: #fff;
+  }
+
+  #parks {
+    padding: 3px;
+    background-color: #96c3f2;
+    border: none;
+  }
+}
+
+.admin-nav {
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid black;
+
+  a {
+    color: #4a7c59;
+  }
 }
 
 .park-form {
+  padding: 10px;
+  margin: 1rem 0;
+  border: 1px solid black;
   text-align: left;
+
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .name-image-inputs-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .park-radio-inputs {
@@ -156,10 +194,48 @@ ul {
       margin: 0;
     }
   }
+
   .header-flex {
     height: 10vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .park-form {
+    .name-image-inputs-wrapper {
+      justify-content: center;
+
+      .input-wrapper {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .park-radio-inputs {
+    .input-wrapper {
+      width: fit-content;
+    }
+  }
+
+  .park-number-inputs {
+    .input-wrapper {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .park-radio-inputs {
+    justify-content: center;
+
+    .input-wrapper {
+      margin: 0 0.5rem;
+    }
+  }
+
+  .park-number-inputs {
+    flex-direction: column;
     align-items: center;
   }
 }

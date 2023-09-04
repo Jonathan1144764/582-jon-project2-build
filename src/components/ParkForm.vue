@@ -1,7 +1,12 @@
 <template>
   <form class="park-form">
-    <ParkNameInput />
-    <ParkImageInput />
+    <h2 v-if="this.$route.href.substring(6) == '/newpark'">Add a new park</h2>
+    <h2 v-else>Update or Delete a park</h2>
+    <div class="name-image-inputs-wrapper">
+      <ParkNameInput />
+      <ParkImageInput />
+    </div>
+
     <div class="park-radio-inputs">
       <ParkStatusInput />
     </div>
