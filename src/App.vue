@@ -274,13 +274,39 @@ ul {
   border-bottom: 1px solid black;
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
+.bookmark-window {
+  width: 90%;
+  background-color: #4a7c59;
+  position: absolute;
+  z-index: 10;
+  animation: fadein 0.08s linear;
+  animation-fill-mode: forwards;
+
+  h3 {
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
-  100% {
-    opacity: 1;
+  .exit-window {
+    margin-top: -2rem;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    float: right;
+  }
+}
+
+.bookmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1.5rem;
+
+  h3 {
+    text-align: left;
+  }
+
+  .event-time {
+    display: block;
   }
 }
 
@@ -317,6 +343,16 @@ ul {
   display: block;
   outline: none;
   resize: none;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 576px) {

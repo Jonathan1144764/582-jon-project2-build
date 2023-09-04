@@ -1,11 +1,14 @@
 <template>
   <div v-if="isShown" class="bookmark-window">
+    <h3>Your events</h3>
     <ExitWindow @closeWindow="closeWindow" />
-    <EventItem
-      v-for="userEvent in userEvents"
-      :userEvent="userEvent"
-      :key="userEvent.id"
-    />
+    <div class="bookmarks-grid">
+      <EventItem
+        v-for="userEvent in userEvents"
+        :userEvent="userEvent"
+        :key="userEvent.id"
+      />
+    </div>
   </div>
 </template>
 

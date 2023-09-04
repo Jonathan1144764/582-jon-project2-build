@@ -1,5 +1,5 @@
 <template>
-  <label for="events">Select Event: </label>
+  <label for="events">Select event: </label>
   <select name="events" id="events" @change="selectEvent">
     <option value=""></option>
     <option

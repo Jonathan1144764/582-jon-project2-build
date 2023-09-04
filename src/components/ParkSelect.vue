@@ -1,5 +1,5 @@
 <template>
-  <label for="parks">Select Park: </label>
+  <label for="parks">Select park: </label>
   <select name="parks" id="parks" @change="selectPark">
     <option value=""></option>
     <option v-for="park in this.allParks" :value="park.parkName" :key="park.id">
