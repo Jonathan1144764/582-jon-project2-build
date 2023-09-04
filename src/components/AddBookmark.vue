@@ -7,8 +7,7 @@ export default {
   name: "AddBookmark",
   methods: {
     bookmarkEvent() {
-      console.log("booked");
-      //   this.$emit("bookmarkEvent", true);
+      this.$emit("bookmarkEvent", true);
     },
   },
 };

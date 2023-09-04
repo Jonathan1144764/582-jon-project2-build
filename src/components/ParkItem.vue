@@ -72,16 +72,16 @@ export default {
     ExitWindow,
   },
   methods: {
-    async showEvents() {
+    showEvents() {
       this.parkEvents = [];
       this.isShown = true;
-      await this.$router.push({
-        name: "parkname",
-        params: { parkname: this.park.parkName },
-      });
-      console.log(this.$route.href.substring(7));
+      // await this.$router.push({
+      //   name: "parkname",
+      //   params: { parkname: this.park.parkName },
+      // });
+      // console.log(this.$route.href.substring(7));
       for (let i = 0; i < this.allEvents.length; i++) {
-        if (this.allEvents[i].eventLocation == this.$route.href.substring(8)) {
+        if (this.allEvents[i].eventLocation == this.park.parkName) {
           this.parkEvents.push(this.allEvents[i]);
           // let h3 = document.createElement("h3");
           // h3.textContent = this.allEvents[i].eventName;

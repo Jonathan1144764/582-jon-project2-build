@@ -50,13 +50,13 @@ const routes = [
     path: "/public",
     name: "public",
     component: PublicView,
-    children: [
-      {
-        path: "/public/:parkname",
-        name: "parkname",
-        component: PublicView,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/public/:parkname",
+    //     name: "parkname",
+    //     component: PublicView,
+    //   },
+    // ],
   },
   {
     path: "/about",

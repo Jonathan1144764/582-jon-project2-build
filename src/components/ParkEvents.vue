@@ -7,15 +7,21 @@
       <span class="event-time">{{ event.eventStartDate }}</span>
     </p>
     <p class="event-description">{{ event.eventDescription }}</p>
-    <AddBookmark />
+    <AddBookmark @bookmarkEvent="bookmarkEvent" />
   </div>
 </template>
 
 <script>
+import { useUserStore } from "../store/userStore";
 import AddBookmark from "./AddBookmark.vue";
 
 export default {
   name: "ParkEvents",
+  setup() {
+    const userStore = useUserStore();
+
+    return { userStore };
+  },
   props: {
     event: {
       type: Object,
@@ -33,6 +39,11 @@ export default {
   },
   components: {
     AddBookmark,
+  },
+  methods: {
+    bookmarkEvent() {
+      console.log(this.userStore.loggedUser);
+    },
   },
 };
 </script>
