@@ -1,5 +1,5 @@
 <template>
-  <button @click="bookmarksView" to="/:username">View your events</button>
+  <button @click="bookmarksView">View your events</button>
 </template>
 
 <script>
@@ -14,10 +14,7 @@ export default {
   },
   methods: {
     bookmarksView() {
-      this.$router.push({
-        name: "username",
-        params: { username: this.userStore.loggedUser },
-      });
+      this.$emit("bookmarksView", this.userStore.loggedUser);
     },
   },
 };
