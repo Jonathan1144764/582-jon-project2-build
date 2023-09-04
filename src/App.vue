@@ -111,6 +111,12 @@ ul {
     background-color: #96c3f2;
     border: none;
   }
+
+  #events {
+    padding: 3px 5px;
+    background-color: #96c3f2;
+    border: none;
+  }
 }
 
 .admin-nav {
@@ -169,6 +175,29 @@ ul {
   }
 }
 
+.event-form {
+  padding: 10px;
+  margin: 1rem 0;
+  border: 1px solid black;
+  text-align: center;
+
+  #parks {
+    margin-bottom: 1rem;
+  }
+}
+
+// .event-form input:first-of-type {
+//   display: block;
+//   margin: auto;
+//   margin-bottom: 0.5rem;
+// }
+
+.event-dates-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #users-list {
   padding: 3px 5px;
   background-color: #96c3f2;
@@ -180,6 +209,29 @@ ul {
   padding: 3px 5px;
   outline: none;
   display: block;
+}
+
+#event-name-input {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+#start-date-input {
+  // display: inline;
+  margin: auto;
+}
+
+#end-date-input {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+#event-description-input {
+  margin: auto;
+  display: block;
+  outline: none;
+  resize: none;
 }
 
 @media screen and (min-width: 576px) {
@@ -222,6 +274,15 @@ ul {
     .input-wrapper {
       text-align: center;
     }
+  }
+
+  .event-dates-inputs {
+    flex-direction: row;
+  }
+
+  #start-date-input,
+  #end-date-input {
+    margin: 0 0.3rem;
   }
 }
 

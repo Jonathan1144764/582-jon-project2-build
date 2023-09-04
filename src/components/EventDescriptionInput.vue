@@ -4,7 +4,7 @@
     name="descriptoin"
     id="event-description-input"
     cols="30"
-    rows="10"
+    rows="3"
   ></textarea>
 </template>
 
