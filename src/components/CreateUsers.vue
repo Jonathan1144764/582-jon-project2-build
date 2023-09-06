@@ -33,7 +33,7 @@ export default {
       };
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/",
+          "http://localhost:3000/",
           {
             method: "POST",
             headers: {

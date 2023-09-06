@@ -28,7 +28,7 @@ export default {
     fetchEvents() {
       this.allEvents = [];
       fetch(
-        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent"
+        "http://localhost:3000/admin/updateevent"
       )
         .then((response) => response.json())
         .then((json) => {
@@ -40,7 +40,7 @@ export default {
     fetchParks() {
       this.allParks = [];
       fetch(
-        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent/park"
+        "http://localhost:3000/admin/updateevent/park"
       )
         .then((response) => response.json())
         .then((json) => {

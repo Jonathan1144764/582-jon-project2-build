@@ -80,7 +80,7 @@ export default {
       };
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/newpark",
+          "http://localhost:3000/admin/newpark",
           {
             method: "POST",
             headers: {
@@ -116,7 +116,7 @@ export default {
       };
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updatepark",
+          "http://localhost:3000/admin/updatepark",
           {
             method: "PUT",
             headers: {
@@ -136,7 +136,7 @@ export default {
       let parkId = this.selectedPark.id;
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updatepark",
+          "http://localhost:3000/admin/updatepark",
           {
             method: "DELETE",
             headers: {

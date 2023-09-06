@@ -45,7 +45,7 @@ export default {
       console.log(this.userStore.loggedUser, this.event);
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public",
+          "http://localhost:3000/public",
           {
             method: "PUT",
             headers: {

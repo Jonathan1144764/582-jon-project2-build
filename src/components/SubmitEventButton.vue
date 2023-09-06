@@ -74,7 +74,7 @@ export default {
       };
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/newevent",
+          "http://localhost:3000/admin/newevent",
           {
             method: "POST",
             headers: {
@@ -108,7 +108,7 @@ export default {
       };
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent",
+          "http://localhost:3000/admin/updateevent",
           {
             method: "PUT",
             headers: {
@@ -128,7 +128,7 @@ export default {
       let eventId = this.selectedEvent.id;
       try {
         await fetch(
-          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent",
+          "http://localhost:3000/admin/updateevent",
           {
             method: "DELETE",
             headers: {

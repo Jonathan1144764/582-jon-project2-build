@@ -37,7 +37,7 @@ export default {
     fetchParks() {
       this.allParks = [];
       fetch(
-        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public"
+        "http://localhost:3000/public"
       )
         .then((response) => response.json())
         .then((json) => {
@@ -50,7 +50,7 @@ export default {
     fetchEvents() {
       this.allEvents = [];
       fetch(
-        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public/event"
+        "http://localhost:3000/public/event"
       )
         .then((response) => response.json())
         .then((json) => {
@@ -63,7 +63,7 @@ export default {
       this.isShown = true;
       this.userEvents = [];
       fetch(
-        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public/user"
+        "http://localhost:3000/public/user"
       )
         .then((response) => response.json())
         .then((json) => {

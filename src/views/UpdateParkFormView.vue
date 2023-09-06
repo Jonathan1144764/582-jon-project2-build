@@ -22,7 +22,7 @@ export default {
   methods: {
     fetchParks() {
       this.allParks = [];
-      fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin")
+      fetch("http://localhost:3000/admin")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {

@@ -29,7 +29,7 @@ export default {
   methods: {
     fetchUsers() {
       this.allUsers = [];
-      fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/")
+      fetch("http://localhost:3000/")
         .then((response) => response.json())
         .then((json) => {
           for (let user of json) {
