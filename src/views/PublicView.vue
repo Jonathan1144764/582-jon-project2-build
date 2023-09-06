@@ -36,9 +36,7 @@ export default {
   methods: {
     fetchParks() {
       this.allParks = [];
-      fetch(
-        "http://localhost:3000/public"
-      )
+      fetch("http://localhost:3000/public")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {
@@ -49,9 +47,7 @@ export default {
     },
     fetchEvents() {
       this.allEvents = [];
-      fetch(
-        "http://localhost:3000/public/event"
-      )
+      fetch("http://localhost:3000/public/event")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {
@@ -62,9 +58,7 @@ export default {
     bookmarksView(loggedUser) {
       this.isShown = true;
       this.userEvents = [];
-      fetch(
-        "http://localhost:3000/public/user"
-      )
+      fetch("http://localhost:3000/public/user")
         .then((response) => response.json())
         .then((json) => {
           for (let user of json) {

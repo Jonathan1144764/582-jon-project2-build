@@ -32,16 +32,13 @@ export default {
         bookmarkedEvents: [],
       };
       try {
-        await fetch(
-          "http://localhost:3000/",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newUser),
-          }
-        );
+        await fetch("http://localhost:3000/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        });
       } catch (error) {
         console.log(error);
       }

@@ -27,9 +27,7 @@ export default {
   methods: {
     fetchEvents() {
       this.allEvents = [];
-      fetch(
-        "http://localhost:3000/admin/updateevent"
-      )
+      fetch("http://localhost:3000/admin/updateevent")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {
@@ -39,9 +37,7 @@ export default {
     },
     fetchParks() {
       this.allParks = [];
-      fetch(
-        "http://localhost:3000/admin/updateevent/park"
-      )
+      fetch("http://localhost:3000/admin/updateevent/park")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {

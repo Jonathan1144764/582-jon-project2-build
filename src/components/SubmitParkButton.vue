@@ -79,16 +79,13 @@ export default {
         parkPlaygrounds: playgrounds,
       };
       try {
-        await fetch(
-          "http://localhost:3000/admin/newpark",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newPark),
-          }
-        );
+        await fetch("http://localhost:3000/admin/newpark", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newPark),
+        });
       } catch (error) {
         console.log(error);
       }
@@ -115,16 +112,13 @@ export default {
         parkPlaygrounds: playgrounds,
       };
       try {
-        await fetch(
-          "http://localhost:3000/admin/updatepark",
-          {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(updatedPark),
-          }
-        );
+        await fetch("http://localhost:3000/admin/updatepark", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedPark),
+        });
       } catch (error) {
         console.log(error);
       }
@@ -135,16 +129,13 @@ export default {
     async deletePark() {
       let parkId = this.selectedPark.id;
       try {
-        await fetch(
-          "http://localhost:3000/admin/updatepark",
-          {
-            method: "DELETE",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ id: parkId }),
-          }
-        );
+        await fetch("http://localhost:3000/admin/updatepark", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id: parkId }),
+        });
       } catch (error) {
         console.log(error);
       }

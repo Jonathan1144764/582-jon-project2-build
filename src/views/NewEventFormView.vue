@@ -33,9 +33,7 @@ export default {
     },
     fetchEvents() {
       this.allEvents = [];
-      fetch(
-        "http://localhost:3000/admin/newevent"
-      )
+      fetch("http://localhost:3000/admin/newevent")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {
