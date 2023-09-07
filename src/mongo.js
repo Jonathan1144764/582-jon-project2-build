@@ -284,7 +284,7 @@ app.post("/", (req, res) => {
 });
 
 app.use((req, res, next) => {
-  res.status(404).sendFile("../public/404.html");
+  res.status(404).sendFile(__dirname + "/public/404.html");
 });
 
 app.listen(port, () => {
