@@ -79,7 +79,7 @@ export default {
         parkPlaygrounds: playgrounds,
       };
       try {
-        await fetch("http://localhost:3000/admin/newpark", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/newpark", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -112,7 +112,7 @@ export default {
         parkPlaygrounds: playgrounds,
       };
       try {
-        await fetch("http://localhost:3000/admin/updatepark", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updatepark", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -129,7 +129,7 @@ export default {
     async deletePark() {
       let parkId = this.selectedPark.id;
       try {
-        await fetch("http://localhost:3000/admin/updatepark", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updatepark", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

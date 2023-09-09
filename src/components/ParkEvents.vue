@@ -44,7 +44,7 @@ export default {
     async bookmarkEvent() {
       console.log(this.userStore.loggedUser, this.event);
       try {
-        await fetch("http://localhost:3000/public", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/public", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

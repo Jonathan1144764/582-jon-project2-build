@@ -32,7 +32,7 @@ export default {
         bookmarkedEvents: [],
       };
       try {
-        await fetch("http://localhost:3000/", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

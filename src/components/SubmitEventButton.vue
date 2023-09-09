@@ -73,7 +73,7 @@ export default {
         eventDescription: description,
       };
       try {
-        await fetch("http://localhost:3000/admin/newevent", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/newevent", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -104,7 +104,7 @@ export default {
         eventDescription: description,
       };
       try {
-        await fetch("http://localhost:3000/admin/updateevent", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updateevent", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -121,7 +121,7 @@ export default {
     async deleteEvent() {
       let eventId = this.selectedEvent.id;
       try {
-        await fetch("http://localhost:3000/admin/updateevent", {
+        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updateevent", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

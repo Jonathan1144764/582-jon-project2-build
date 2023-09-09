@@ -18,7 +18,7 @@ export default {
   methods: {
     fetchParks() {
       this.allParks = [];
-      fetch("http://localhost:3000/admin")
+      fetch("https://jonathan64.web582.com/web-framework/project-2/admin")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {
