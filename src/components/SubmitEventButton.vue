@@ -73,13 +73,16 @@ export default {
         eventDescription: description,
       };
       try {
-        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/newevent", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newEvent),
-        });
+        await fetch(
+          "https://jonathan64.web582.com/web-framework/project-2/admin/newevent",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newEvent),
+          }
+        );
       } catch (error) {
         console.log(error);
       }
@@ -104,13 +107,16 @@ export default {
         eventDescription: description,
       };
       try {
-        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updateevent", {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(updatedEvent),
-        });
+        await fetch(
+          "https://jonathan64.web582.com/web-framework/project-2/admin/updateevent",
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedEvent),
+          }
+        );
       } catch (error) {
         console.log(error);
       }
@@ -121,13 +127,16 @@ export default {
     async deleteEvent() {
       let eventId = this.selectedEvent.id;
       try {
-        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updateevent", {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ id: eventId }),
-        });
+        await fetch(
+          "https://jonathan64.web582.com/web-framework/project-2/admin/updateevent",
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id: eventId }),
+          }
+        );
       } catch (error) {
         console.log(error);
       }

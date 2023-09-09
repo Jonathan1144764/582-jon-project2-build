@@ -283,7 +283,7 @@ app.post("/", (req, res) => {
   run().catch(console.dir);
 });
 
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).sendFile(__dirname + "/public/404.html");
 });
 

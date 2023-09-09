@@ -79,13 +79,16 @@ export default {
         parkPlaygrounds: playgrounds,
       };
       try {
-        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/newpark", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newPark),
-        });
+        await fetch(
+          "https://jonathan64.web582.com/web-framework/project-2/admin/newpark",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newPark),
+          }
+        );
       } catch (error) {
         console.log(error);
       }
@@ -112,13 +115,16 @@ export default {
         parkPlaygrounds: playgrounds,
       };
       try {
-        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updatepark", {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(updatedPark),
-        });
+        await fetch(
+          "https://jonathan64.web582.com/web-framework/project-2/admin/updatepark",
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedPark),
+          }
+        );
       } catch (error) {
         console.log(error);
       }
@@ -129,13 +135,16 @@ export default {
     async deletePark() {
       let parkId = this.selectedPark.id;
       try {
-        await fetch("https://jonathan64.web582.com/web-framework/project-2/admin/updatepark", {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ id: parkId }),
-        });
+        await fetch(
+          "https://jonathan64.web582.com/web-framework/project-2/admin/updatepark",
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id: parkId }),
+          }
+        );
       } catch (error) {
         console.log(error);
       }

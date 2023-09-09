@@ -47,7 +47,9 @@ export default {
     },
     fetchEvents() {
       this.allEvents = [];
-      fetch("https://jonathan64.web582.com/web-framework/project-2/public/event")
+      fetch(
+        "https://jonathan64.web582.com/web-framework/project-2/public/event"
+      )
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {
