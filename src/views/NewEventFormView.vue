@@ -23,7 +23,7 @@ export default {
   methods: {
     fetchParks() {
       this.allParks = [];
-      fetch("https://jonathan64.web582.com/web-framework/project-2/admin")
+      fetch("//jonathan64.web582.com/web-framework/project-2/admin")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {
@@ -33,9 +33,7 @@ export default {
     },
     fetchEvents() {
       this.allEvents = [];
-      fetch(
-        "https://jonathan64.web582.com/web-framework/project-2/admin/newevent"
-      )
+      fetch("//jonathan64.web582.com/web-framework/project-2/admin/newevent")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {

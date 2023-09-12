@@ -80,7 +80,7 @@ export default {
       };
       try {
         await fetch(
-          "https://jonathan64.web582.com/web-framework/project-2/admin/newpark",
+          "//jonathan64.web582.com/web-framework/project-2/admin/newpark",
           {
             method: "POST",
             headers: {
@@ -116,7 +116,7 @@ export default {
       };
       try {
         await fetch(
-          "https://jonathan64.web582.com/web-framework/project-2/admin/updatepark",
+          "//jonathan64.web582.com/web-framework/project-2/admin/updatepark",
           {
             method: "PUT",
             headers: {
@@ -136,7 +136,7 @@ export default {
       let parkId = this.selectedPark.id;
       try {
         await fetch(
-          "https://jonathan64.web582.com/web-framework/project-2/admin/updatepark",
+          "//jonathan64.web582.com/web-framework/project-2/admin/updatepark",
           {
             method: "DELETE",
             headers: {

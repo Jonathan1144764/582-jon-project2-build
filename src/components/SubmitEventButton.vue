@@ -74,7 +74,7 @@ export default {
       };
       try {
         await fetch(
-          "https://jonathan64.web582.com/web-framework/project-2/admin/newevent",
+          "//jonathan64.web582.com/web-framework/project-2/admin/newevent",
           {
             method: "POST",
             headers: {
@@ -108,7 +108,7 @@ export default {
       };
       try {
         await fetch(
-          "https://jonathan64.web582.com/web-framework/project-2/admin/updateevent",
+          "//jonathan64.web582.com/web-framework/project-2/admin/updateevent",
           {
             method: "PUT",
             headers: {
@@ -128,7 +128,7 @@ export default {
       let eventId = this.selectedEvent.id;
       try {
         await fetch(
-          "https://jonathan64.web582.com/web-framework/project-2/admin/updateevent",
+          "//jonathan64.web582.com/web-framework/project-2/admin/updateevent",
           {
             method: "DELETE",
             headers: {

@@ -29,7 +29,7 @@ export default {
   methods: {
     fetchUsers() {
       this.allUsers = [];
-      fetch("https://jonathan64.web582.com/web-framework/project-2")
+      fetch("//jonathan64.web582.com/web-framework/project-2")
         .then((response) => response.json())
         .then((json) => {
           for (let user of json) {

@@ -36,7 +36,7 @@ export default {
   methods: {
     fetchParks() {
       this.allParks = [];
-      fetch("https://jonathan64.web582.com/web-framework/project-2/public")
+      fetch("//jonathan64.web582.com/web-framework/project-2/public")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {
@@ -47,9 +47,7 @@ export default {
     },
     fetchEvents() {
       this.allEvents = [];
-      fetch(
-        "https://jonathan64.web582.com/web-framework/project-2/public/event"
-      )
+      fetch("//jonathan64.web582.com/web-framework/project-2/public/event")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {
@@ -60,7 +58,7 @@ export default {
     bookmarksView(loggedUser) {
       this.isShown = true;
       this.userEvents = [];
-      fetch("https://jonathan64.web582.com/web-framework/project-2/public/user")
+      fetch("//jonathan64.web582.com/web-framework/project-2/public/user")
         .then((response) => response.json())
         .then((json) => {
           for (let user of json) {
