@@ -27,7 +27,9 @@ export default {
   methods: {
     fetchEvents() {
       this.allEvents = [];
-      fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent")
+      fetch(
+        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent"
+      )
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {

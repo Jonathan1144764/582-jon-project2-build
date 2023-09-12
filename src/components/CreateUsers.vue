@@ -32,13 +32,16 @@ export default {
         bookmarkedEvents: [],
       };
       try {
-        await fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newUser),
-        });
+        await fetch(
+          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          }
+        );
       } catch (error) {
         console.log(error);
       }

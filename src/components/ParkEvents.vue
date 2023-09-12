@@ -44,16 +44,19 @@ export default {
     async bookmarkEvent() {
       console.log(this.userStore.loggedUser, this.event);
       try {
-        await fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public", {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            user: this.userStore.loggedUser,
-            event: this.event,
-          }),
-        });
+        await fetch(
+          "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public",
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              user: this.userStore.loggedUser,
+              event: this.event,
+            }),
+          }
+        );
       } catch (error) {
         console.log(error);
       }
