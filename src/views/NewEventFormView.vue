@@ -23,7 +23,7 @@ export default {
   methods: {
     fetchParks() {
       this.allParks = [];
-      fetch("//jonathan64.web582.com/web-framework/project-2/admin")
+      fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin")
         .then((response) => response.json())
         .then((json) => {
           for (let park of json) {
@@ -33,7 +33,7 @@ export default {
     },
     fetchEvents() {
       this.allEvents = [];
-      fetch("//jonathan64.web582.com/web-framework/project-2/admin/newevent")
+      fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/newevent")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {

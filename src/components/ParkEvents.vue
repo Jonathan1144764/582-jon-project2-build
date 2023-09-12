@@ -44,7 +44,7 @@ export default {
     async bookmarkEvent() {
       console.log(this.userStore.loggedUser, this.event);
       try {
-        await fetch("//jonathan64.web582.com/web-framework/project-2/public", {
+        await fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/public", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

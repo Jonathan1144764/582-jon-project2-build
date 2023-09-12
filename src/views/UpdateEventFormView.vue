@@ -27,7 +27,7 @@ export default {
   methods: {
     fetchEvents() {
       this.allEvents = [];
-      fetch("//jonathan64.web582.com/web-framework/project-2/admin/updateevent")
+      fetch("https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent")
         .then((response) => response.json())
         .then((json) => {
           for (let event of json) {
@@ -38,7 +38,7 @@ export default {
     fetchParks() {
       this.allParks = [];
       fetch(
-        "//jonathan64.web582.com/web-framework/project-2/admin/updateevent/park"
+        "https://special-doodle-r949xwgp9jpf5w56-3000.app.github.dev/admin/updateevent/park"
       )
         .then((response) => response.json())
         .then((json) => {
