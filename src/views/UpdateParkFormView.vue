@@ -43,8 +43,7 @@ export default {
           document.querySelector("#soccer").value = selectedPark.soccerFields;
           document.querySelector("#baseball").value =
             selectedPark.baseballDiamonds;
-          document.querySelector("#chalet").value =
-            selectedPark.parkChalets;
+          document.querySelector("#chalet").value = selectedPark.parkChalets;
           document.querySelector("#playground").value =
             selectedPark.parkPlaygrounds;
         }

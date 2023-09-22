@@ -1,6 +1,8 @@
 <template>
   <form class="event-form">
-    <h2 v-if="this.$route.href.substring(6) == '/newevent'">Add a new event</h2>
+    <h2 v-if="this.$route.fullPath.substring(6) == '/newevent'">
+      Add a new event
+    </h2>
     <h2 v-else>Update or delete an event</h2>
     <EventNameInput />
     <ParkSelect :allParks="allParks" />

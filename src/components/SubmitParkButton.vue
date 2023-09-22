@@ -1,18 +1,18 @@
 <template>
   <button
-    v-if="this.$route.href.substring(6) == '/newpark'"
+    v-if="this.$route.fullPath.substring(6) == '/newpark'"
     @click="submitNewPark"
   >
     Submit
   </button>
   <button
-    v-if="this.$route.href.substring(6) == '/updatepark'"
+    v-if="this.$route.fullPath.substring(6) == '/updatepark'"
     @click="updatePark"
   >
     Update
   </button>
   <button
-    v-if="this.$route.href.substring(6) == '/updatepark'"
+    v-if="this.$route.fullPath.substring(6) == '/updatepark'"
     @click="deletePark"
   >
     Delete
