@@ -24,7 +24,7 @@ export default {
             parkStatus: "no status",
             soccerFields: 0,
             baseballDiamonds: 0,
-            parkBathrooms: 0,
+            parkChalets: 0,
             parkPlaygrounds: 0,
           },
         ];

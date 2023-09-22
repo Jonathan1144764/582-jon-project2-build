@@ -9,7 +9,7 @@
     <ul>
       <li>Soccer fields: {{ park.soccerFields }}</li>
       <li>Baseball diamonds: {{ park.baseballDiamonds }}</li>
-      <li>Chalets: {{ park.parkBathrooms }}</li>
+      <li>Chalets: {{ park.parkChalets }}</li>
       <li>Playgrounds: {{ park.parkPlaygrounds }}</li>
     </ul>
     <button class="show-events-btn" @click="showEvents">See events</button>
@@ -43,7 +43,7 @@ export default {
           parkStatus: "no status",
           soccerFields: 0,
           baseballDiamonds: 0,
-          parkBathrooms: 0,
+          parkChalets: 0,
           parkPlaygrounds: 0,
         };
       },

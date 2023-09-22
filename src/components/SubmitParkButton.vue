@@ -35,7 +35,7 @@ export default {
             parkStatus: "no status",
             soccerFields: 0,
             baseballDiamonds: 0,
-            parkBathrooms: 0,
+            parkChalets: 0,
             parkPlaygrounds: 0,
           },
         ];
@@ -51,7 +51,7 @@ export default {
           parkStatus: "no status",
           soccerFields: 0,
           baseballDiamonds: 0,
-          parkBathrooms: 0,
+          parkChalets: 0,
           parkPlaygrounds: 0,
         };
       },
@@ -65,7 +65,7 @@ export default {
       let status = document.querySelector('input[name="status"]:checked').value;
       let soccer = Number(document.querySelector("#soccer").value);
       let baseball = Number(document.querySelector("#baseball").value);
-      let bathrooms = Number(document.querySelector("#bathrooms").value);
+      let chalets = Number(document.querySelector("#chalet").value);
       let playgrounds = Number(document.querySelector("#playground").value);
 
       let newPark = {
@@ -75,7 +75,7 @@ export default {
         parkStatus: status,
         soccerFields: soccer,
         baseballDiamonds: baseball,
-        parkBathrooms: bathrooms,
+        parkChalets: chalets,
         parkPlaygrounds: playgrounds,
       };
       try {
@@ -101,7 +101,7 @@ export default {
       let status = document.querySelector('input[name="status"]:checked').value;
       let soccer = Number(document.querySelector("#soccer").value);
       let baseball = Number(document.querySelector("#baseball").value);
-      let bathrooms = Number(document.querySelector("#bathrooms").value);
+      let chalets = Number(document.querySelector("#chalet").value);
       let playgrounds = Number(document.querySelector("#playground").value);
 
       let updatedPark = {
@@ -111,7 +111,7 @@ export default {
         parkStatus: status,
         soccerFields: soccer,
         baseballDiamonds: baseball,
-        parkBathrooms: bathrooms,
+        parkChalets: chalets,
         parkPlaygrounds: playgrounds,
       };
       try {
@@ -158,7 +158,7 @@ export default {
       document.querySelector('input[name="status"]:checked').checked = false;
       document.querySelector("#soccer").value = 0;
       document.querySelector("#baseball").value = 0;
-      document.querySelector("#bathrooms").value = 0;
+      document.querySelector("#chalet").value = 0;
       document.querySelector("#playground").value = 0;
     },
     clearParkSelect() {

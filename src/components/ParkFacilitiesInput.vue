@@ -8,8 +8,8 @@
     <input type="number" name="baseball" id="baseball" value="0" min="0" />
   </div>
   <div class="input-wrapper">
-    <label for="bathrooms">Chalets: </label>
-    <input type="number" name="bathrooms" id="bathrooms" value="0" min="0" />
+    <label for="chalet">Chalets: </label>
+    <input type="number" name="chalet" id="chalet" value="0" min="0" />
   </div>
   <div class="input-wrapper">
     <label for="playground">Playgrounds: </label>
